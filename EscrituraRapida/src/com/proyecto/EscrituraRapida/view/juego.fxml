@@ -1,0 +1,36 @@
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.proyecto.EscrituraRapida.controller.GameController"
+            style="-fx-background-color: linear-gradient(to right, #ff8008, #ffc837); -fx-padding:20;">
+
+    <top>
+        <Label text="🔥 Escritura Rápida 🔥"
+               style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: white;"
+               BorderPane.alignment="CENTER"/>
+    </top>
+
+    <center>
+        <VBox alignment="CENTER" spacing="20">
+            <Label fx:id="labelNivel" text="Nivel: 1"
+                   style="-fx-font-size: 22px; -fx-text-fill: #fff3b0;"/>
+            <Label fx:id="labelPalabra" text="Palabra aquí"
+                   style="-fx-font-size: 30px; -fx-font-weight: bold; -fx-text-fill: #5a189a;"/>
+            <Label fx:id="labelTiempo" text="Tiempo: 20"
+                   style="-fx-font-size: 20px; -fx-text-fill: #c1121f;"/>
+
+            <TextField fx:id="campoTexto" promptText="Escribe aquí..."
+                       onAction="#validarPalabra"
+                       style="-fx-font-size: 18px; -fx-background-color: white; -fx-border-color: #ff8008; -fx-border-radius: 8;"/>
+
+            <Button fx:id="btnValidar" text="🔥 Validar"
+                    onAction="#validarPalabra"
+                    style="-fx-background-color: #d00000; -fx-text-fill: white; -fx-font-size: 18px; -fx-background-radius: 15; -fx-padding: 10 25;"/>
+
+            <Label fx:id="labelMensaje"
+                   style="-fx-font-size: 18px; -fx-text-fill: white;"/>
+        </VBox>
+    </center>
+</BorderPane>
